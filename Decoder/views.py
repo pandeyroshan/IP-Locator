@@ -4,11 +4,7 @@ import requests
 
 def index(request):
     if request.method == 'POST':
-        print('POST REQUEST')
-        ipAddress = request.POST.get("ipAddress")
-        requestURL = 'http://ip-api.com/json/'
-        IPURL = requestURL+str(ipAddress)
-        response = requests.get(IPURL)
+        response = requests.get('http://ip-api.com/json/'+str(request.POST.get("ipAddress")))
         countryCode = response.json().get('countryCode')
         country = response.json().get('country')
         region = response.json().get('regionName')
