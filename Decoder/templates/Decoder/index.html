@@ -10,11 +10,11 @@
             <h1 class="text-success text-center mb-5 font-weight-light">IP - Locator</h1>
             <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                <input type="text" title="FILEPATH" name="ipAddress" required="required" class="form-control form-control-lg font-weight-light" placeholder="IP Address">
+                <input type="text" title="FILEPATH" name="ipAddress" required class="form-control form-control-lg font-weight-light" placeholder="Provide a IP address">
                 <br>
                 <div class="text-center">
                     <br>
-                    <button type="submit" class="btn btn-info">FETCH DETAILS</button>
+                    <button type="submit" class="btn btn-info">Load Results</button>
                 </div>
             </form>
             <br>
